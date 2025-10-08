@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kids Collection - Gul Ahmed</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Navbar -->
+  <header class="flex justify-between items-center bg-black px-6 md:px-16 py-4 sticky top-0 z-50">
+    <div class="text-white text-2xl font-bold">Gul Ahmed</div>
+
+    <!-- Desktop Menu -->
+    <nav class="hidden md:block">
+      <ul class="flex space-x-6">
+        <li><a href="gulahmed.html" class="text-white hover:bg-yellow-500 hover:text-black px-3 py-2 rounded">Home</a></li>
+        <li><a href="women.html" class="text-white hover:bg-yellow-500 hover:text-black px-3 py-2 rounded">Women</a></li>
+        <li><a href="men.html" class="text-white hover:bg-yellow-500 hover:text-black px-3 py-2 rounded">Men</a></li>
+        <li><a href="kids.html" class="bg-yellow-500 text-black px-3 py-2 rounded">Kids</a></li>
+        <li><a href="sale.html" class="text-white hover:bg-yellow-500 hover:text-black px-3 py-2 rounded">Sale</a></li>
+        <li><a href="bags.html" class="text-white hover:bg-yellow-500 hover:text-black px-3 py-2 rounded">Bags</a></li>
+        <li><a href="fragrances.html" class="text-white hover:bg-yellow-500 hover:text-black px-3 py-2 rounded">Fragrances</a></li>
+        <li><a href="aboutus.html" class="text-white hover:bg-yellow-500 hover:text-black px-3 py-2 rounded">About Us</a></li>
+        <li><a href="contact.html" class="text-white hover:bg-yellow-500 hover:text-black px-3 py-2 rounded">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Mobile Cart + Menu -->
+    <div class="flex items-center space-x-4">
+      <a href="cart.html" class="text-white font-bold flex items-center space-x-2 hover:text-yellow-500">
+        <span class="text-2xl">🛒</span>
+        <span id="cart-count">0</span>
+      </a>
+      <button id="menu-toggle" class="md:hidden text-white text-2xl focus:outline-none">☰</button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <nav id="mobile-menu" class="hidden bg-black text-white px-6 py-4 md:hidden">
+    <ul class="space-y-4">
+      <li><a href="gulahmed.html" class="block hover:bg-yellow-500 hover:text-black px-3 py-2 rounded">Home</a></li>
+      <li><a href="women.html" class="block hover:bg-yellow-500 hover:text-black px-3 py-2 rounded">Women</a></li>
+      <li><a href="men.html" class="block hover:bg-yellow-500 hover:text-black px-3 py-2 rounded">Men</a></li>
+      <li><a href="kids.html" class="block bg-yellow-500 text-black px-3 py-2 rounded">Kids</a></li>
+      <li><a href="sale.html" class="block hover:bg-yellow-500 hover:text-black px-3 py-2 rounded">Sale</a></li>
+      <li><a href="bags.html" class="block hover:bg-yellow-500 hover:text-black px-3 py-2 rounded">Bags</a></li>
+      <li><a href="fragrances.html" class="block hover:bg-yellow-500 hover:text-black px-3 py-2 rounded">Fragrances</a></li>
+      <li><a href="aboutus.html" class="block hover:bg-yellow-500 hover:text-black px-3 py-2 rounded">About Us</a></li>
+      <li><a href="contact.html" class="block hover:bg-yellow-500 hover:text-black px-3 py-2 rounded">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Banner -->
+  <section class="h-[60vh] flex justify-center items-center text-center text-white relative bg-cover bg-center" style="background-image: url('images/kids-banner.jpg');">
+    <div class="bg-black bg-opacity-60 p-6 md:p-12 rounded-lg">
+      <h1 class="text-4xl md:text-6xl font-bold">Kids’ Collection</h1>
+      <p class="mt-4 text-lg md:text-xl">Trendy & Comfortable Wear for Boys and Girls</p>
+      <a href="#products" class="inline-block mt-6 bg-yellow-500 text-black font-bold px-6 py-3 rounded hover:bg-white hover:text-black transition">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section id="products" class="py-16 px-6 md:px-16 text-center">
+    <h2 class="text-3xl font-bold text-gray-900 mb-10">New Arrivals</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
+
+      <!-- Product 1 -->
+      <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition transform hover:-translate-y-2">
+        <img src="images/kids shalwar kameez.webp" alt="Kids Shalwar Kameez" class="w-full h-72 object-contain rounded-lg mb-4">
+        <h3 class="text-xl font-semibold">Kids Shalwar Kameez</h3>
+        <p class="text-yellow-500 text-lg font-bold my-2">$30</p>
+        <a href="#" class="inline-block bg-black text-white px-5 py-2 rounded hover:bg-yellow-500 hover:text-black transition add-cart" 
+           data-name="Kids Shalwar Kameez" data-price="30" data-image="images/kids shalwar kameez.webp">Add to Cart</a>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition transform hover:-translate-y-2">
+        <img src="images/casual dress.webp" alt="Casual Dress" class="w-full h-72 object-contain rounded-lg mb-4">
+        <h3 class="text-xl font-semibold">Casual Dress</h3>
+        <p class="text-yellow-500 text-lg font-bold my-2">$25</p>
+        <a href="#" class="inline-block bg-black text-white px-5 py-2 rounded hover:bg-yellow-500 hover:text-black transition add-cart"
+           data-name="Casual Dress" data-price="25" data-image="images/casual dress.webp">Add to Cart</a>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition transform hover:-translate-y-2">
+        <img src="images/summer frock.webp" alt="Summer Frock" class="w-full h-72 object-contain rounded-lg mb-4">
+        <h3 class="text-xl font-semibold">Summer Frock</h3>
+        <p class="text-yellow-500 text-lg font-bold my-2">$20</p>
+        <a href="#" class="inline-block bg-black text-white px-5 py-2 rounded hover:bg-yellow-500 hover:text-black transition add-cart"
+           data-name="Summer Frock" data-price="20" data-image="images/summer frock.webp">Add to Cart</a>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition transform hover:-translate-y-2">
+        <img src="images/party wear dress.webp" alt="Party Wear Dress" class="w-full h-72 object-contain rounded-lg mb-4">
+        <h3 class="text-xl font-semibold">Party Wear Dress</h3>
+        <p class="text-yellow-500 text-lg font-bold my-2">$40</p>
+        <a href="#" class="inline-block bg-black text-white px-5 py-2 rounded hover:bg-yellow-500 hover:text-black transition add-cart"
+           data-name="Party Wear Dress" data-price="40" data-image="images/party wear dress.webp">Add to Cart</a>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition transform hover:-translate-y-2">
+        <img src="images/kids kurta.webp" alt="Kids Kurta" class="w-full h-72 object-contain rounded-lg mb-4">
+        <h3 class="text-xl font-semibold">Kids Kurta</h3>
+        <p class="text-yellow-500 text-lg font-bold my-2">$28</p>
+        <a href="#" class="inline-block bg-black text-white px-5 py-2 rounded hover:bg-yellow-500 hover:text-black transition add-cart"
+           data-name="Kids Kurta" data-price="28" data-image="images/kids kurta.webp">Add to Cart</a>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition transform hover:-translate-y-2">
+        <img src="images/boys t shirts and shorts.webp" alt="Boys T-Shirt & Shorts" class="w-full h-72 object-contain rounded-lg mb-4">
+        <h3 class="text-xl font-semibold">Boys T-Shirt & Shorts</h3>
+        <p class="text-yellow-500 text-lg font-bold my-2">$22</p>
+        <a href="#" class="inline-block bg-black text-white px-5 py-2 rounded hover:bg-yellow-500 hover:text-black transition add-cart"
+           data-name="Boys T-Shirt & Shorts" data-price="22" data-image="images/boys t shirts and shorts.webp">Add to Cart</a>
+      </div>
+
+      <!-- Product 7 -->
+      <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition transform hover:-translate-y-2">
+        <img src="images/girls party dress.jpg" alt="Girls Party Dress" class="w-full h-72 object-contain rounded-lg mb-4">
+        <h3 class="text-xl font-semibold">Girls Party Dress</h3>
+        <p class="text-yellow-500 text-lg font-bold my-2">$35</p>
+        <a href="#" class="inline-block bg-black text-white px-5 py-2 rounded hover:bg-yellow-500 hover:text-black transition add-cart"
+           data-name="Girls Party Dress" data-price="35" data-image="images/girls party dress.jpg">Add to Cart</a>
+      </div>
+
+      <!-- Product 8 -->
+      <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition transform hover:-translate-y-2">
+        <img src="images/winter jacket.jpg" alt="Winter Jacket" class="w-full h-72 object-contain rounded-lg mb-4">
+        <h3 class="text-xl font-semibold">Winter Jacket</h3>
+        <p class="text-yellow-500 text-lg font-bold my-2">$45</p>
+        <a href="#" class="inline-block bg-black text-white px-5 py-2 rounded hover:bg-yellow-500 hover:text-black transition add-cart"
+           data-name="Winter Jacket" data-price="45" data-image="images/winter jacket.jpg">Add to Cart</a>
+      </div>
+
+      <!-- Product 9 -->
+      <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition transform hover:-translate-y-2">
+        <img src="images/casual kids shirt.webp" alt="Casual Kids Shirt" class="w-full h-72 object-contain rounded-lg mb-4">
+        <h3 class="text-xl font-semibold">Casual Kids Shirt</h3>
+        <p class="text-yellow-500 text-lg font-bold my-2">$20</p>
+        <a href="#" class="inline-block bg-black text-white px-5 py-2 rounded hover:bg-yellow-500 hover:text-black transition add-cart"
+           data-name="Casual Kids Shirt" data-price="20" data-image="images/casual kids shirt.webp">Add to Cart</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white text-center py-6 mt-10">
+    <p>&copy; 2025 Gul Ahmed Online Shopping | All Rights Reserved</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+    menuToggle.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    // Cart functionality using localStorage
+    const cartCount = document.getElementById("cart-count");
+    const addCartBtns = document.querySelectorAll(".add-cart");
+
+    function updateCartCount() {
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cartCount.textContent = cart.length;
+    }
+
+    addCartBtns.forEach(btn => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        const product = {
+          name: btn.dataset.name,
+          price: btn.dataset.price,
+          image: btn.dataset.image
+        };
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.push(product);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        updateCartCount();
+        alert("✅ Item added to cart!");
+      });
+    });
+
+    // Initialize cart count on page load
+    document.addEventListener("DOMContentLoaded", updateCartCount);
+  </script>
+
+</body>
+</html>

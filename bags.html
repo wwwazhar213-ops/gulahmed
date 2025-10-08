@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bags Collection - Gul Ahmed</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+  <!-- Navbar -->
+  <header class="bg-black sticky top-0 z-50">
+    <div class="flex items-center justify-between px-6 py-4">
+      <!-- Logo -->
+      <div class="text-white text-2xl font-bold">Gul Ahmed</div>
+
+      <!-- Desktop Menu -->
+      <nav class="hidden md:block">
+        <ul class="flex space-x-6 text-white font-medium">
+          <li><a href="gulahmed.html" class="hover:text-yellow-400">Home</a></li>
+          <li><a href="women.html" class="hover:text-yellow-400">Women</a></li>
+          <li><a href="men.html" class="hover:text-yellow-400">Men</a></li>
+          <li><a href="kids.html" class="hover:text-yellow-400">Kids</a></li>
+          <li><a href="sale.html" class="hover:text-yellow-400">Sale</a></li>
+          <li><a href="bags.html" class="bg-yellow-400 text-black px-3 py-1 rounded">Bags</a></li>
+          <li><a href="fragrances.html" class="hover:text-yellow-400">Fragrances</a></li>
+          <li><a href="aboutus.html" class="hover:text-yellow-400">About Us</a></li>
+          <li><a href="contact.html" class="hover:text-yellow-400">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Cart -->
+      <a href="cart.html" class="text-white font-semibold flex items-center space-x-2 hover:text-yellow-400">
+        <span class="text-2xl">🛒</span>
+        <span id="cart-count">0</span>
+      </a>
+
+      <!-- Mobile Hamburger -->
+      <button id="menu-btn" class="md:hidden text-white text-2xl focus:outline-none">☰</button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <nav id="mobile-menu" class="hidden md:hidden bg-black border-t border-gray-700">
+      <ul class="flex flex-col space-y-2 p-4 text-white font-medium">
+        <li><a href="index.html" class="hover:text-yellow-400">Home</a></li>
+        <li><a href="women.html" class="hover:text-yellow-400">Women</a></li>
+        <li><a href="men.html" class="hover:text-yellow-400">Men</a></li>
+        <li><a href="kids.html" class="hover:text-yellow-400">Kids</a></li>
+        <li><a href="sale.html" class="hover:text-yellow-400">Sale</a></li>
+        <li><a href="bags.html" class="bg-yellow-400 text-black px-3 py-1 rounded">Bags</a></li>
+        <li><a href="fragrances.html" class="hover:text-yellow-400">Fragrances</a></li>
+        <li><a href="aboutus.html" class="hover:text-yellow-400">About Us</a></li>
+        <li><a href="contact.html" class="hover:text-yellow-400">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Banner -->
+  <section class="relative h-[60vh] flex items-center justify-center text-center text-white bg-cover bg-center" style="background-image: url('images/bags-banner.jpg')">
+    <div class="bg-black/60 p-6 rounded-lg max-w-2xl">
+      <h1 class="text-4xl md:text-5xl font-bold">Bags Collection</h1>
+      <p class="mt-3 text-lg">Trendy, Stylish & Practical Bags for Every Occasion</p>
+      <a href="#products" class="mt-4 inline-block bg-yellow-400 text-black font-semibold px-6 py-3 rounded hover:bg-white hover:text-black transition">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section id="products" class="py-16 px-6 md:px-12 text-center">
+    <h2 class="text-3xl font-bold mb-10">Our Bag Collection</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Product 1 -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1">
+        <img src="images/leather hand bags.webp" alt="Leather Handbag" class="w-full h-72 object-contain">
+        <div class="p-4">
+          <h3 class="text-lg font-semibold">Leather Handbag</h3>
+          <p class="text-yellow-500 font-bold mb-3">$80</p>
+          <a href="#" class="inline-block bg-black text-white px-4 py-2 rounded hover:bg-yellow-400 hover:text-black transition add-cart"
+            data-name="Leather Handbag" data-price="80" data-image="images/leather hand bags.webp">Add to Cart</a>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1">
+        <img src="images/casual backpack.webp" alt="Casual Backpack" class="w-full h-72 object-contain">
+        <div class="p-4">
+          <h3 class="text-lg font-semibold">Casual Backpack</h3>
+          <p class="text-yellow-500 font-bold mb-3">$60</p>
+          <a href="#" class="inline-block bg-black text-white px-4 py-2 rounded hover:bg-yellow-400 hover:text-black transition add-cart"
+            data-name="Casual Backpack" data-price="60" data-image="images/casual backpack.webp">Add to Cart</a>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1">
+        <img src="images/party clutch.webp" alt="Party Clutch" class="w-full h-72 object-contain">
+        <div class="p-4">
+          <h3 class="text-lg font-semibold">Party Clutch</h3>
+          <p class="text-yellow-500 font-bold mb-3">$40</p>
+          <a href="#" class="inline-block bg-black text-white px-4 py-2 rounded hover:bg-yellow-400 hover:text-black transition add-cart"
+            data-name="Party Clutch" data-price="40" data-image="images/party clutch.webp">Add to Cart</a>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1">
+        <img src="images/stylish tote bag.webp" alt="Stylish Tote Bag" class="w-full h-72 object-contain">
+        <div class="p-4">
+          <h3 class="text-lg font-semibold">Stylish Tote Bag</h3>
+          <p class="text-yellow-500 font-bold mb-3">$70</p>
+          <a href="#" class="inline-block bg-black text-white px-4 py-2 rounded hover:bg-yellow-400 hover:text-black transition add-cart"
+            data-name="Stylish Tote Bag" data-price="70" data-image="images/stylish tote bag.webp">Add to Cart</a>
+        </div>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1">
+        <img src="images/office leather bag.jpeg" alt="Office Leather Bag" class="w-full h-72 object-contain">
+        <div class="p-4">
+          <h3 class="text-lg font-semibold">Office Leather Bag</h3>
+          <p class="text-yellow-500 font-bold mb-3">$95</p>
+          <a href="#" class="inline-block bg-black text-white px-4 py-2 rounded hover:bg-yellow-400 hover:text-black transition add-cart"
+            data-name="Office Leather Bag" data-price="95" data-image="images/office leather bag.jpeg">Add to Cart</a>
+        </div>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1">
+        <img src="images/travel duffle bag.webp" alt="Travel Duffel Bag" class="w-full h-72 object-contain">
+        <div class="p-4">
+          <h3 class="text-lg font-semibold">Travel Duffel Bag</h3>
+          <p class="text-yellow-500 font-bold mb-3">$110</p>
+          <a href="#" class="inline-block bg-black text-white px-4 py-2 rounded hover:bg-yellow-400 hover:text-black transition add-cart"
+            data-name="Travel Duffel Bag" data-price="110" data-image="images/travel duffle bag.webp">Add to Cart</a>
+        </div>
+      </div>
+
+      <!-- Product 7 -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1">
+        <img src="images/classic sholder bag.webp" alt="Classic Shoulder Bag" class="w-full h-72 object-contain">
+        <div class="p-4">
+          <h3 class="text-lg font-semibold">Classic Shoulder Bag</h3>
+          <p class="text-yellow-500 font-bold mb-3">$65</p>
+          <a href="#" class="inline-block bg-black text-white px-4 py-2 rounded hover:bg-yellow-400 hover:text-black transition add-cart"
+            data-name="Classic Shoulder Bag" data-price="65" data-image="images/classic sholder bag.webp">Add to Cart</a>
+        </div>
+      </div>
+
+      <!-- Product 8 -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1">
+        <img src="images/laptop messenger bag.jpg" alt="Laptop Messenger Bag" class="w-full h-72 object-contain">
+        <div class="p-4">
+          <h3 class="text-lg font-semibold">Laptop Messenger Bag</h3>
+          <p class="text-yellow-500 font-bold mb-3">$85</p>
+          <a href="#" class="inline-block bg-black text-white px-4 py-2 rounded hover:bg-yellow-400 hover:text-black transition add-cart"
+            data-name="Laptop Messenger Bag" data-price="85" data-image="images/laptop messenger bag.jpg">Add to Cart</a>
+        </div>
+      </div>
+
+      <!-- Product 9 -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1">
+        <img src="images/trendy crossbody bag.webp" alt="Trendy Crossbody Bag" class="w-full h-72 object-contain">
+        <div class="p-4">
+          <h3 class="text-lg font-semibold">Trendy Crossbody Bag</h3>
+          <p class="text-yellow-500 font-bold mb-3">$55</p>
+          <a href="#" class="inline-block bg-black text-white px-4 py-2 rounded hover:bg-yellow-400 hover:text-black transition add-cart"
+            data-name="Trendy Crossbody Bag" data-price="55" data-image="images/trendy crossbody bag.webp">Add to Cart</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white text-center py-4 mt-10">
+    <p>&copy; 2025 Gul Ahmed Online Shopping | All Rights Reserved</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    // Cart functionality using localStorage
+    const cartCount = document.getElementById("cart-count");
+    const addCartBtns = document.querySelectorAll(".add-cart");
+
+    function updateCartCount() {
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cartCount.textContent = cart.length;
+    }
+
+    addCartBtns.forEach(btn => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        const product = {
+          name: btn.dataset.name,
+          price: btn.dataset.price,
+          image: btn.dataset.image
+        };
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.push(product);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        updateCartCount();
+        alert("✅ Item added to cart!");
+      });
+    });
+
+    // Initialize cart count on page load
+    document.addEventListener("DOMContentLoaded", updateCartCount);
+  </script>
+
+</body>
+</html>

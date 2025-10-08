@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kurta for Boys - Gul Ahmed</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    img {
+      image-rendering: -webkit-optimize-contrast; /* Chrome/Safari */
+      image-rendering: crisp-edges;              /* Firefox/Edge */
+    }
+  </style>
+</head>
+<body class="bg-gray-100 font-sans">
+
+  <!-- Navbar -->
+  <header class="bg-black bg-opacity-80 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-12 py-4">
+      <div class="text-white text-2xl font-bold">Gul Ahmed</div>
+      <nav>
+        <ul class="flex space-x-4 text-white items-center">
+          <li><a href="gulahmed.html" class="px-3 py-2 rounded-md bg-yellow-500 text-black block">Home</a></li>
+          <li><a href="women.html" class="px-3 py-2 hover:bg-yellow-500 rounded-md block">Women</a></li>
+          <li><a href="men.html" class="px-3 py-2 hover:bg-yellow-500 rounded-md block">Men</a></li>
+          <li><a href="kids.html" class="px-3 py-2 hover:bg-yellow-500 rounded-md block">Kids</a></li>
+          <li><a href="sale.html" class="px-3 py-2 hover:bg-yellow-500 rounded-md block">Sale</a></li>
+          <li><a href="bags.html" class="px-3 py-2 hover:bg-yellow-500 rounded-md block">Bags</a></li>
+          <li><a href="fragrances.html" class="px-3 py-2 hover:bg-yellow-500 rounded-md block">Fragrances</a></li>
+          <li><a href="aboutus.html" class="px-3 py-2 hover:bg-yellow-500 rounded-md block">About Us</a></li>
+          <li><a href="contact.html" class="px-3 py-2 hover:bg-yellow-500 rounded-md block">Contact</a></li>
+          <!-- Cart Icon -->
+          <li>
+            <a href="cart.html" class="relative flex items-center px-3 py-2 hover:bg-yellow-500 rounded-md">
+              🛒
+              <span id="cart-count" class="ml-1 bg-yellow-500 text-black text-xs font-bold px-2 py-0.5 rounded-full">0</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Product Section -->
+  <section class="max-w-6xl mx-auto my-10 p-6 bg-white rounded-lg shadow-lg">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Product Image -->
+      <div>
+        <img src="images/kurta for boys.webp" 
+             alt="Kurta for Boys" 
+             class="rounded-lg shadow-md w-full max-h-[500px] object-contain">
+      </div>
+      <!-- Product Details -->
+      <div class="flex flex-col justify-center">
+        <h1 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">Kurta for Boys</h1>
+        <p class="text-lg text-gray-600 mb-4">
+          Gul Ahmed’s Kurta for Boys combines comfort and style for young trendsetters. Designed with soft cotton
+          fabrics and traditional patterns, this kurta is perfect for casual wear and festive occasions.
+        </p>
+        <p class="text-2xl font-semibold text-yellow-500 mb-6">$35</p>
+
+        <!-- Add to Cart -->
+        <button onclick="addToCart()" 
+                class="bg-black text-white px-6 py-3 rounded-lg font-bold hover:bg-yellow-500 hover:text-black transition w-max">
+          🛒 Add to Cart
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Products -->
+  <section class="max-w-6xl mx-auto my-12 p-6">
+    <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-6">You May Also Like</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition">
+        <img src="images/kids party frock.jpg" 
+             alt="Party Frock" 
+             class="w-full max-h-64 object-contain rounded-lg mb-4">
+        <h3 class="text-lg font-semibold">Party Frock</h3>
+        <p class="text-yellow-500 font-semibold mb-2">$45</p>
+        <a href="partyfrock.html" class="text-sm bg-black text-white px-4 py-2 rounded hover:bg-yellow-500 hover:text-black transition">View Details</a>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition">
+        <img src="images/casual wear.webp" 
+             alt="Casual Wear" 
+             class="w-full max-h-64 object-contain rounded-lg mb-4">
+        <h3 class="text-lg font-semibold">Casual Wear</h3>
+        <p class="text-yellow-500 font-semibold mb-2">$30</p>
+        <a href="casualwear.html" class="text-sm bg-black text-white px-4 py-2 rounded hover:bg-yellow-500 hover:text-black transition">View Details</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white text-center py-4">
+    <p>&copy; 2025 Gul Ahmed Online Shopping | All Rights Reserved</p>
+  </footer>
+
+  <!-- JavaScript for Cart -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      updateCartCount();
+    });
+
+    function addToCart() {
+      const product = {
+        name: "Kurta for Boys",
+        price: 35,
+        image: "images/kurta for boys.webp"
+      };
+
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart.push(product);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      updateCartCount();
+      alert("✅ Kurta for Boys added to your cart!");
+    }
+
+    function updateCartCount() {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      document.getElementById("cart-count").textContent = cart.length;
+    }
+  </script>
+
+</body>
+</html>

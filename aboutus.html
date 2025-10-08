@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Gul Ahmed</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Navbar -->
+  <header class="bg-black px-6 md:px-12 py-4 sticky top-0 z-50">
+    <div class="flex justify-between items-center">
+      <div class="text-2xl font-bold text-white">Gul Ahmed</div>
+
+      <!-- Desktop Menu -->
+      <nav class="hidden md:block">
+        <ul class="flex space-x-6">
+          <li><a href="gulahmed.html" class="text-white hover:bg-yellow-500 px-3 py-2 rounded">Home</a></li>
+          <li><a href="women.html" class="text-white hover:bg-yellow-500 px-3 py-2 rounded">Women</a></li>
+          <li><a href="men.html" class="text-white hover:bg-yellow-500 px-3 py-2 rounded">Men</a></li>
+          <li><a href="kids.html" class="text-white hover:bg-yellow-500 px-3 py-2 rounded">Kids</a></li>
+          <li><a href="sale.html" class="text-white hover:bg-yellow-500 px-3 py-2 rounded">Sale</a></li>
+          <li><a href="bags.html" class="text-white hover:bg-yellow-500 px-3 py-2 rounded">Bags</a></li>
+          <li><a href="fragrances.html" class="text-white hover:bg-yellow-500 px-3 py-2 rounded">Fragrances</a></li>
+          <li><a href="aboutus.html" class="bg-yellow-500 text-black px-3 py-2 rounded">About Us</a></li>
+          <li><a href="contact.html" class="text-white hover:bg-yellow-500 px-3 py-2 rounded">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="md:hidden text-white text-3xl focus:outline-none">
+        ☰
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <nav id="mobile-menu" class="hidden md:hidden mt-4">
+      <ul class="flex flex-col space-y-2 bg-gray-900 p-4 rounded-lg">
+        <li><a href="gulahmed.html" class="text-white hover:bg-yellow-500 px-3 py-2 rounded block">Home</a></li>
+        <li><a href="women.html" class="text-white hover:bg-yellow-500 px-3 py-2 rounded block">Women</a></li>
+        <li><a href="men.html" class="text-white hover:bg-yellow-500 px-3 py-2 rounded block">Men</a></li>
+        <li><a href="kids.html" class="text-white hover:bg-yellow-500 px-3 py-2 rounded block">Kids</a></li>
+        <li><a href="sale.html" class="text-white hover:bg-yellow-500 px-3 py-2 rounded block">Sale</a></li>
+        <li><a href="bags.html" class="text-white hover:bg-yellow-500 px-3 py-2 rounded block">Bags</a></li>
+        <li><a href="fragrances.html" class="text-white hover:bg-yellow-500 px-3 py-2 rounded block">Fragrances</a></li>
+        <li><a href="aboutus.html" class="bg-yellow-500 text-black px-3 py-2 rounded block">About Us</a></li>
+        <li><a href="contact.html" class="text-white hover:bg-yellow-500 px-3 py-2 rounded block">Contact</a></li>
+        <li><span class="text-white font-semibold block">🛒 Cart: <span id="cart-count-mobile">0</span></span></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="h-[60vh] flex justify-center items-center text-center text-white relative bg-cover bg-center" style="background-image: url('images/about-banner.jpg');">
+    <div class="bg-black bg-opacity-60 px-6 py-8 rounded-lg">
+      <h1 class="text-4xl md:text-5xl font-bold">About Gul Ahmed</h1>
+      <p class="mt-4 text-lg">Tradition Meets Innovation in Fashion</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="py-16 px-6 md:px-12 max-w-5xl mx-auto">
+    <h2 class="text-3xl font-bold text-center text-gray-900 mb-6">Our Story</h2>
+    <p class="mb-4 text-lg text-justify">Gul Ahmed has been a household name in the fashion industry for decades, known for its premium quality fabrics, timeless designs, and innovative fashion solutions. From humble beginnings as a textile manufacturer, we have grown into a leading fashion brand offering a complete range of clothing and lifestyle products.</p>
+    <p class="mb-4 text-lg text-justify">Our journey is built on a strong foundation of trust, creativity, and excellence. Every piece of clothing and accessory we create reflects our passion for style and our commitment to delivering the best to our customers.</p>
+    <p class="mb-4 text-lg text-justify">Today, Gul Ahmed is more than just a brand – it’s a lifestyle. We celebrate culture, craftsmanship, and creativity, while always staying ahead of fashion trends.</p>
+
+    <!-- Mission & Vision -->
+    <div class="grid md:grid-cols-2 gap-8 mt-10">
+      <div class="bg-white shadow-lg p-6 rounded-xl">
+        <h3 class="text-2xl font-semibold text-yellow-500 mb-3">Our Mission</h3>
+        <p class="text-lg">To provide high-quality, stylish, and affordable fashion that enhances everyday living. We aim to empower our customers with confidence and individuality through our products.</p>
+      </div>
+      <div class="bg-white shadow-lg p-6 rounded-xl">
+        <h3 class="text-2xl font-semibold text-yellow-500 mb-3">Our Vision</h3>
+        <p class="text-lg">To become a global leader in fashion and lifestyle by blending heritage with innovation, and to inspire people worldwide with our values of quality, elegance, and creativity.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="py-16 px-6 md:px-12 bg-yellow-50 text-center">
+    <h2 class="text-3xl font-bold text-gray-900">Why Choose Gul Ahmed?</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+      <div class="bg-white shadow-lg p-6 rounded-xl">
+        <h3 class="text-xl font-semibold text-yellow-500 mb-2">✔ Premium Quality</h3>
+        <p>We use the finest fabrics and materials to create durable and luxurious fashion products.</p>
+      </div>
+      <div class="bg-white shadow-lg p-6 rounded-xl">
+        <h3 class="text-xl font-semibold text-yellow-500 mb-2">✔ Affordable Fashion</h3>
+        <p>Our products are designed to be stylish yet accessible, so everyone can enjoy premium fashion.</p>
+      </div>
+      <div class="bg-white shadow-lg p-6 rounded-xl">
+        <h3 class="text-xl font-semibold text-yellow-500 mb-2">✔ Tradition & Modernity</h3>
+        <p>We combine traditional craftsmanship with modern designs to create timeless pieces.</p>
+      </div>
+      <div class="bg-white shadow-lg p-6 rounded-xl">
+        <h3 class="text-xl font-semibold text-yellow-500 mb-2">✔ Customer First</h3>
+        <p>Customer satisfaction is at the core of everything we do, from design to delivery.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="py-16 px-6 md:px-12 text-center">
+    <h2 class="text-3xl font-bold text-gray-900 mb-10">Meet Our Team</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white shadow-lg rounded-xl p-6">
+        <h3 class="text-xl font-semibold">Ali Khan</h3>
+        <p class="text-gray-600">CEO & Founder</p>
+      </div>
+      <div class="bg-white shadow-lg rounded-xl p-6">
+        <h3 class="text-xl font-semibold">Sara Ahmed</h3>
+        <p class="text-gray-600">Creative Director</p>
+      </div>
+      <div class="bg-white shadow-lg rounded-xl p-6">
+        <h3 class="text-xl font-semibold">Bilal Hussain</h3>
+        <p class="text-gray-600">Head of Marketing</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white text-center py-4 mt-10">
+    <p>&copy; 2025 Gul Ahmed Online Shopping | All Rights Reserved</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Mobile Menu Toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Cart Script
+    const cartCount = document.getElementById("cart-count");
+    const cartCountMobile = document.getElementById("cart-count-mobile");
+    const addCartBtns = document.querySelectorAll(".add-cart");
+    let count = 0;
+
+    addCartBtns.forEach(btn => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        count++;
+        cartCount.textContent = count;
+        cartCountMobile.textContent = count;
+        alert("Item added to cart!");
+      });
+    });
+  </script>
+</body>
+</html>

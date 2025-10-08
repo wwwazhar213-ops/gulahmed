@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Women Collection - Gul Ahmed</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Navbar -->
+  <header class="bg-black sticky top-0 z-50">
+    <div class="flex justify-between items-center px-6 md:px-12 py-4">
+      <div class="text-2xl font-bold text-white">Gul Ahmed</div>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex">
+        <ul class="flex space-x-6">
+          <li><a href="gulahmed.html" class="text-white hover:bg-yellow-500 px-4 py-2 rounded">Home</a></li>
+          <li><a href="women.html" class="bg-yellow-500 text-black px-4 py-2 rounded">Women</a></li>
+          <li><a href="men.html" class="text-white hover:bg-yellow-500 px-4 py-2 rounded">Men</a></li>
+          <li><a href="kids.html" class="text-white hover:bg-yellow-500 px-4 py-2 rounded">Kids</a></li>
+          <li><a href="sale.html" class="text-white hover:bg-yellow-500 px-4 py-2 rounded">Sale</a></li>
+          <li><a href="bags.html" class="text-white hover:bg-yellow-500 px-4 py-2 rounded">Bags</a></li>
+          <li><a href="fragrances.html" class="text-white hover:bg-yellow-500 px-4 py-2 rounded">Fragrances</a></li>
+          <li><a href="aboutus.html" class="text-white hover:bg-yellow-500 px-4 py-2 rounded">About Us</a></li>
+          <li><a href="contact.html" class="text-white hover:bg-yellow-500 px-4 py-2 rounded">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Cart + Mobile Menu Button -->
+      <div class="flex items-center space-x-4">
+        <a href="cart.html" class="text-white font-bold flex items-center space-x-2 hover:text-yellow-500">
+          <span class="text-2xl">🛒</span>
+          <span id="cart-count">0</span>
+        </a>
+        <button id="menu-btn" class="text-white text-2xl md:hidden">&#9776;</button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav -->
+    <nav id="mobile-menu" class="hidden md:hidden bg-black">
+      <ul class="flex flex-col space-y-2 p-4">
+        <li><a href="gulahmed.html" class="text-white block hover:bg-yellow-500 px-4 py-2 rounded">Home</a></li>
+        <li><a href="women.html" class="bg-yellow-500 text-black block px-4 py-2 rounded">Women</a></li>
+        <li><a href="men.html" class="text-white block hover:bg-yellow-500 px-4 py-2 rounded">Men</a></li>
+        <li><a href="kids.html" class="text-white block hover:bg-yellow-500 px-4 py-2 rounded">Kids</a></li>
+        <li><a href="sale.html" class="text-white block hover:bg-yellow-500 px-4 py-2 rounded">Sale</a></li>
+        <li><a href="bags.html" class="text-white block hover:bg-yellow-500 px-4 py-2 rounded">Bags</a></li>
+        <li><a href="fragrances.html" class="text-white block hover:bg-yellow-500 px-4 py-2 rounded">Fragrances</a></li>
+        <li><a href="aboutus.html" class="text-white block hover:bg-yellow-500 px-4 py-2 rounded">About Us</a></li>
+        <li><a href="contact.html" class="text-white block hover:bg-yellow-500 px-4 py-2 rounded">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Banner Section -->
+  <section class="h-[60vh] bg-[url('images/women-banner.jpg')] bg-cover bg-center flex items-center justify-center text-center relative">
+    <div class="bg-black bg-opacity-60 p-6 md:p-8 rounded-lg text-white max-w-lg mx-4">
+      <h1 class="text-3xl md:text-5xl font-bold mb-4">Women’s Collection</h1>
+      <p class="mb-6 text-base md:text-lg">Explore the latest luxury and casual outfits</p>
+      <a href="#products" class="bg-yellow-500 text-black font-semibold px-6 py-3 rounded hover:bg-white hover:text-black transition">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- Women Products -->
+  <section id="products" class="py-16 px-6 md:px-16 text-center">
+    <h2 class="text-3xl font-bold text-gray-800 mb-10">New Arrivals</h2>
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+
+      <!-- Product Template -->
+      <div class="bg-white rounded-lg shadow-lg p-4 hover:-translate-y-2 transition">
+        <img src="images/printed lawn suit.webp" alt="Printed Lawn Suit" class="w-full h-72 md:h-80 object-contain rounded-lg mb-4"/>
+        <h3 class="text-xl font-semibold">Printed Lawn Suit</h3>
+        <p class="text-yellow-500 text-lg font-bold my-2">$45</p>
+        <a href="#" class="bg-black text-white px-5 py-2 rounded hover:bg-yellow-500 hover:text-black transition add-cart"
+           data-name="Printed Lawn Suit" data-price="45" data-image="images/printed lawn suit.webp">Add to Cart</a>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-lg p-4 hover:-translate-y-2 transition">
+        <img src="images/embridered kurta.webp" alt="Embroidered Kurta" class="w-full h-72 md:h-80 object-contain rounded-lg mb-4"/>
+        <h3 class="text-xl font-semibold">Embroidered Kurta</h3>
+        <p class="text-yellow-500 text-lg font-bold my-2">$55</p>
+        <a href="#" class="bg-black text-white px-5 py-2 rounded hover:bg-yellow-500 hover:text-black transition add-cart"
+           data-name="Embroidered Kurta" data-price="55" data-image="images/embridered kurta.webp">Add to Cart</a>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-lg p-4 hover:-translate-y-2 transition">
+        <img src="images/casual cotton.webp" alt="Casual Cotton Suit" class="w-full h-72 md:h-80 object-contain rounded-lg mb-4"/>
+        <h3 class="text-xl font-semibold">Casual Cotton Suit</h3>
+        <p class="text-yellow-500 text-lg font-bold my-2">$40</p>
+        <a href="#" class="bg-black text-white px-5 py-2 rounded hover:bg-yellow-500 hover:text-black transition add-cart"
+           data-name="Casual Cotton Suit" data-price="40" data-image="images/casual cotton.webp">Add to Cart</a>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-lg p-4 hover:-translate-y-2 transition">
+        <img src="images/luxury silk dress.jpg" alt="Luxury Silk Dress" class="w-full h-72 md:h-80 object-contain rounded-lg mb-4"/>
+        <h3 class="text-xl font-semibold">Luxury Silk Dress</h3>
+        <p class="text-yellow-500 text-lg font-bold my-2">$70</p>
+        <a href="#" class="bg-black text-white px-5 py-2 rounded hover:bg-yellow-500 hover:text-black transition add-cart"
+           data-name="Luxury Silk Dress" data-price="70" data-image="images/luxury silk dress.jpg">Add to Cart</a>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-lg p-4 hover:-translate-y-2 transition">
+        <img src="images/formal shiffon dupatta.webp" alt="Formal Chiffon Outfit" class="w-full h-72 md:h-80 object-contain rounded-lg mb-4"/>
+        <h3 class="text-xl font-semibold">Formal Chiffon Outfit</h3>
+        <p class="text-yellow-500 text-lg font-bold my-2">$85</p>
+        <a href="#" class="bg-black text-white px-5 py-2 rounded hover:bg-yellow-500 hover:text-black transition add-cart"
+           data-name="Formal Chiffon Outfit" data-price="85" data-image="images/formal shiffon dupatta.webp">Add to Cart</a>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-lg p-4 hover:-translate-y-2 transition">
+        <img src="images/printed cambrik suit.webp" alt="Printed Cambric Suit" class="w-full h-72 md:h-80 object-contain rounded-lg mb-4"/>
+        <h3 class="text-xl font-semibold">Printed Cambric Suit</h3>
+        <p class="text-yellow-500 text-lg font-bold my-2">$50</p>
+        <a href="#" class="bg-black text-white px-5 py-2 rounded hover:bg-yellow-500 hover:text-black transition add-cart"
+           data-name="Printed Cambric Suit" data-price="50" data-image="images/printed cambrik suit.webp">Add to Cart</a>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-lg p-4 hover:-translate-y-2 transition">
+        <img src="images/casual daily wear.webp" alt="Casual Daily Wear" class="w-full h-72 md:h-80 object-contain rounded-lg mb-4"/>
+        <h3 class="text-xl font-semibold">Casual Daily Wear</h3>
+        <p class="text-yellow-500 text-lg font-bold my-2">$35</p>
+        <a href="#" class="bg-black text-white px-5 py-2 rounded hover:bg-yellow-500 hover:text-black transition add-cart"
+           data-name="Casual Daily Wear" data-price="35" data-image="images/casual daily wear.webp">Add to Cart</a>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-lg p-4 hover:-translate-y-2 transition">
+        <img src="images/party wear dress.webp" alt="Party Wear Dress" class="w-full h-72 md:h-80 object-contain rounded-lg mb-4"/>
+        <h3 class="text-xl font-semibold">Party Wear Dress</h3>
+        <p class="text-yellow-500 text-lg font-bold my-2">$90</p>
+        <a href="#" class="bg-black text-white px-5 py-2 rounded hover:bg-yellow-500 hover:text-black transition add-cart"
+           data-name="Party Wear Dress" data-price="90" data-image="images/party wear dress.webp">Add to Cart</a>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-lg p-4 hover:-translate-y-2 transition">
+        <img src="images/designer collection.webp" alt="Designer Collection" class="w-full h-72 md:h-80 object-contain rounded-lg mb-4"/>
+        <h3 class="text-xl font-semibold">Designer Collection</h3>
+        <p class="text-yellow-500 text-lg font-bold my-2">$120</p>
+        <a href="#" class="bg-black text-white px-5 py-2 rounded hover:bg-yellow-500 hover:text-black transition add-cart"
+           data-name="Designer Collection" data-price="120" data-image="images/designer collection.webp">Add to Cart</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white text-center py-6 mt-10">
+    <p>&copy; 2025 Gul Ahmed Online Shopping | All Rights Reserved</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Mobile Menu Toggle
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    menuBtn.addEventListener("click", () => mobileMenu.classList.toggle("hidden"));
+
+    // Cart Functionality
+    const cartCount = document.getElementById("cart-count");
+    const addCartBtns = document.querySelectorAll(".add-cart");
+
+    function updateCartCount() {
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cartCount.textContent = cart.length;
+    }
+
+    addCartBtns.forEach(btn => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        const product = {
+          name: btn.dataset.name,
+          price: btn.dataset.price,
+          image: btn.dataset.image
+        };
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.push(product);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        updateCartCount();
+        alert("✅ Item added to cart!");
+      });
+    });
+
+    document.addEventListener("DOMContentLoaded", updateCartCount);
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Cart - Gul Ahmed</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+  <!-- Header -->
+  <header class="bg-black sticky top-0 z-50 p-4 flex justify-between items-center">
+    <div class="text-white text-2xl font-bold">Gul Ahmed</div>
+    <!-- Back to Shopping link -->
+    <a href="gulahmed.html" class="text-yellow-500 font-semibold flex items-center gap-1">
+      ⬅ Back to Shopping
+    </a>
+  </header>
+
+  <!-- Cart Section -->
+  <section class="max-w-4xl mx-auto my-10 p-6 bg-white rounded-xl shadow-md">
+    <h2 class="text-3xl font-bold mb-6 text-center">Your Cart</h2>
+
+    <!-- Cart Items List -->
+    <div id="cart-items" class="space-y-4 mb-8">
+      <!-- Items will be dynamically injected here -->
+    </div>
+
+    <!-- Order Form -->
+    <form id="order-form" class="space-y-4 bg-gray-50 p-6 rounded-lg shadow-inner">
+      <h3 class="text-2xl font-semibold mb-4">Place Your Order</h3>
+      <input type="text" id="name" placeholder="Full Name" class="w-full p-2 border rounded" required>
+      <input type="email" id="email" placeholder="Email Address" class="w-full p-2 border rounded" required>
+      <input type="tel" id="phone" placeholder="Phone Number" class="w-full p-2 border rounded" required>
+      <textarea id="address" placeholder="Delivery Address" class="w-full p-2 border rounded" rows="4" required></textarea>
+      <button type="submit" class="bg-yellow-500 text-black px-6 py-2 rounded font-bold hover:bg-black hover:text-yellow-500 transition">
+        Submit Order
+      </button>
+    </form>
+  </section>
+
+  <script>
+    const cartContainer = document.getElementById('cart-items');
+    const orderForm = document.getElementById('order-form');
+
+    // Load cart items from localStorage
+    function loadCart() {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      cartContainer.innerHTML = '';
+      if (cart.length === 0) {
+        cartContainer.innerHTML = '<p class="text-gray-600 text-center">Your cart is empty.</p>';
+        return;
+      }
+      cart.forEach((item, index) => {
+        const itemEl = document.createElement('div');
+        itemEl.className = 'flex items-center justify-between bg-gray-100 p-3 rounded';
+        itemEl.innerHTML = `
+          <div class="flex items-center gap-4">
+            <img src="${item.image}" alt="${item.name}" class="w-16 h-16 object-contain rounded">
+            <div>
+              <h4 class="font-semibold">${item.name}</h4>
+              <p class="text-yellow-500 font-bold">$${item.price}</p>
+            </div>
+          </div>
+          <button class="text-red-500 font-bold hover:text-red-700" onclick="removeItem(${index})">Remove</button>
+        `;
+        cartContainer.appendChild(itemEl);
+      });
+    }
+
+    // Remove item from cart
+    function removeItem(index) {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      cart.splice(index, 1);
+      localStorage.setItem('cart', JSON.stringify(cart));
+      loadCart();
+    }
+
+    // Handle order submission
+    orderForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      if (cart.length === 0) {
+        alert('Your cart is empty!');
+        return;
+      }
+      const order = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        address: document.getElementById('address').value,
+        items: cart
+      };
+      console.log('Order Submitted:', order);
+      alert('✅ Your order has been submitted!');
+      localStorage.removeItem('cart');
+      loadCart();
+      orderForm.reset();
+    });
+
+    document.addEventListener('DOMContentLoaded', loadCart);
+  </script>
+
+</body>
+</html>
